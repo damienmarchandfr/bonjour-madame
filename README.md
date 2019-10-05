@@ -20,10 +20,10 @@ or
     import {BonjourMadameClient} from 'bonjour-madame'
     const client = new BonjourMadameClient()
 
-    // Get today image
+    // Get today image with html source
     await client.get(true)
 
-    // Get random image
+    // Get today image without html source
     await client.get(false)
 
 ### JavaScript
@@ -31,19 +31,19 @@ or
     const BM = require('bonjour-madame')
     const client = new BM.BonjourMadameClient()
 
-    // Get today image
+    // Get today image with html source
     await client.get(true)
 
-    // Get random image
+    // Get today image without html source
     await client.get(false)
 
 ## Response
 
     { 
       title: '',
-      today: true,
       imgUrl: '',
-      pageUrl: ''
+      pageUrl: '',
+      pageSource? : ''
     }
 
 ## Examples
