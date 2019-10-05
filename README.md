@@ -2,6 +2,8 @@
 
 # Bonjour madame client.
 
+[![Build Status](https://travis-ci.com/damienmarchandfr/bonjour-madame.svg?branch=master)](https://travis-ci.com/damienmarchandfr/bonjour-madame)
+
 ## Goal
 Get data in json format from [bonjour madame](http://dites.bonjourmadame.fr) website.
 
