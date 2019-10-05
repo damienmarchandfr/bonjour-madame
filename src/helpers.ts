@@ -1,27 +1,30 @@
-import Axios from 'axios'
-import * as cheerio from 'cheerio'
-
-export function generateUrl(today: boolean) {
-  return  today ? 'http://dites.bonjourmadame.fr/' : 'http://dites.bonjourmadame.fr/random'
-}
+import Axios, { AxiosRequestConfig } from "axios";
+import * as cheerio from "cheerio";
 
 export async function request(today = true): Promise<string> {
-   const axiosConfig = {
-      method: 'get',
-      url: generateUrl(today),
-      maxRedirects : 200
-   }
+  const axiosConfig: AxiosRequestConfig = {
+    method: "get",
+    url: 'http://www.bonjourmadame.fr',
+    maxRedirects: 200
+  };
 
-   const response = await Axios(axiosConfig)
+  const response = await Axios(axiosConfig);
 
-   return response.data
+  return response.data;
 }
 
-export function parsePage(html: string): {imageUrl: string, title: string, pageUrl: string} {
-  const $ = cheerio.load(html)
+export function parsePage(html: string): { imageUrl: string; title: string; pageUrl: string } {
+  const $ = cheerio.load(html);
+
+  const title = $(".post-title").text();
+
   return {
-    imageUrl : $('.post').find('img').prop('src'),
-    title : $('.post').find('img').prop('alt'),
-    pageUrl : $('.timestamp').find('a').attr('href')
-  }
+    imageUrl: $(".post")
+      .find("img")
+      .prop("src").split('?resize')[0],
+    title: title.replace(/\t?\n|\t/g, '').trim(),
+    pageUrl: $(".timestamp")
+      .find("a")
+      .attr("href")
+  };
 }
