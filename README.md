@@ -20,6 +20,7 @@ or
 ### TypeScript
 
     import {BonjourMadameClient} from 'bonjour-madame'
+    import * as moment from 'moment'
     const client = new BonjourMadameClient()
 
     // Get today image with html source
@@ -27,6 +28,9 @@ or
 
     // Get today image without html source
     await client.get(false)
+
+    // Get image at date
+    await client.getAtDate(moment().substract(1,'day').toDate())
 
 ### JavaScript
 

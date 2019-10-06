@@ -1,10 +1,10 @@
 import Axios, { AxiosRequestConfig } from "axios";
 import * as cheerio from "cheerio";
 
-export async function request(today = true): Promise<string> {
+export async function request(url = 'http://www.bonjourmadame.fr'): Promise<string> {
   const axiosConfig: AxiosRequestConfig = {
     method: "get",
-    url: 'http://www.bonjourmadame.fr',
+    url,
     maxRedirects: 200
   };
 
