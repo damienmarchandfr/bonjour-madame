@@ -43,6 +43,9 @@ or
     // Get today image without html source
     await client.get(false)
 
+    // Get image at date
+    await client.getAtDate(moment().substract(1,'day').toDate())
+
 ## Response
 
     { 
@@ -54,5 +57,5 @@ or
 
 ## Examples
 
-    See ./src/tests/index.ts or ./dist/tests/index.js
+    See ./src/example/index.ts or ./src/example/index.js
 
