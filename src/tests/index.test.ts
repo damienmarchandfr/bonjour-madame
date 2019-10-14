@@ -68,3 +68,17 @@ test("Get madame at date before first date", async () => {
   expect(hasError).toEqual(true)
 
 });
+
+test("Throw error when try to get image on a sunday",async()=>{
+  const client = new BonjourMadameClient();
+  let hasError = false
+
+  try {
+    await client.getAtDate(moment("2019-10-06").toDate(),false)
+  } catch (error) {
+    hasError = true
+  }
+
+  expect(hasError).toEqual(true)
+
+})

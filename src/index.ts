@@ -24,6 +24,11 @@ export class BonjourMadameClient {
       throw new Error(`No image before 2018/12/10`);
     }
 
+    // No image sunday
+    if(m.isoWeekday()===7){
+      throw new Error(`No image sunday.`)
+    }
+
     // Must be yesterday
     if (m.isSame(new Date(), "day")) {
       return this.get(getSource);
