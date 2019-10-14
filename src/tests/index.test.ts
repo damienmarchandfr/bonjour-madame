@@ -69,7 +69,7 @@ test("Get madame at date before first date", async () => {
 
 });
 
-test("Throw error when try to get image on a sunday",async()=>{
+test("throw error when try to get image on a sunday",async()=>{
   const client = new BonjourMadameClient();
   let hasError = false
 
