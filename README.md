@@ -5,6 +5,7 @@
 [![Build Status](https://travis-ci.com/damienmarchandfr/bonjour-madame.svg?branch=master)](https://travis-ci.com/damienmarchandfr/bonjour-madame)
 
 ## Goal
+
 Get data in json format from [bonjour madame](http://dites.bonjourmadame.fr) website.
 
 ## Install
@@ -35,6 +36,7 @@ or
 ### JavaScript
 
     const BM = require('bonjour-madame')
+    const moment = require('moment')
     const client = new BM.BonjourMadameClient()
 
     // Get today image with html source
@@ -48,7 +50,7 @@ or
 
 ## Response
 
-    { 
+    {
       title: '',
       imgUrl: '',
       pageUrl: '',
@@ -58,4 +60,3 @@ or
 ## Examples
 
     See ./src/example/index.ts or ./src/example/index.js
-
