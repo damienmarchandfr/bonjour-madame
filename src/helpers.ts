@@ -25,6 +25,6 @@ export function parsePage(html: string): { imageUrl: string; title: string; page
     title: title.replace(/\t?\n|\t/g, '').trim(),
     pageUrl: $(".timestamp")
       .find("a")
-      .attr("href")
+      .attr("href") || ''
   };
 }

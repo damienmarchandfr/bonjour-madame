@@ -1,7 +1,7 @@
 {
   "name": "bonjour-madame",
   "description": "bonjour madame client",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "license": "MIT",
@@ -30,22 +30,22 @@
     "dist"
   ],
   "dependencies": {
-    "axios": "^0.19.0",
+    "axios": "^0.19.2",
     "cheerio": "^1.0.0-rc.3",
-    "moment": "^2.24.0"
+    "moment": "^2.26.0"
   },
   "devDependencies": {
     "@types/axios": "^0.14.0",
-    "@types/cheerio": "^0.22.13",
-    "@types/jest": "^24.0.18",
+    "@types/cheerio": "^0.22.18",
+    "@types/jest": "^25.2.3",
     "@types/moment": "^2.13.0",
-    "@types/node": "^12.7.11",
-    "@types/sinon": "^7.5.0",
-    "jest": "^24.9.0",
-    "sinon": "^7.5.0",
-    "ts-jest": "^24.1.0",
-    "ts-node": "^8.4.1",
-    "ts-node-dev": "^1.0.0-pre.43",
-    "typescript": "^3.6.3"
+    "@types/node": "^14.0.12",
+    "@types/sinon": "^9.0.4",
+    "jest": "^26.0.1",
+    "sinon": "^9.0.2",
+    "ts-jest": "^26.1.0",
+    "ts-node": "^8.10.2",
+    "ts-node-dev": "^1.0.0-pre.44",
+    "typescript": "^3.9.5"
   }
 }
