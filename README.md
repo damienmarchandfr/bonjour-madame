@@ -31,7 +31,7 @@ or
     await client.get(false)
 
     // Get image at date
-    await client.getAtDate(moment().substract(1,'day').toDate())
+    await client.getAtDate(moment().subtract(1,'day').toDate())
 
 ### JavaScript
 
@@ -46,7 +46,7 @@ or
     await client.get(false)
 
     // Get image at date
-    await client.getAtDate(moment().substract(1,'day').toDate())
+    await client.getAtDate(moment().subtract(1,'day').toDate())
 
 ## Response
 
