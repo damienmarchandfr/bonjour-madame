@@ -1,5 +1,8 @@
 import { BonjourMadameClient } from "..";
+import * as momentTZ from 'moment-timezone'
 import * as moment from "moment";
+
+momentTZ.tz('Europe/Paris')
 
 test("Make a real request to website.", async () => {
   const client = new BonjourMadameClient();
